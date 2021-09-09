@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zlp.mapper.PermissionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zlp.entity.Permission">
+        <id column="id" property="id" />
+        <result column="pid" property="pid" />
+        <result column="name" property="name" />
+        <result column="permission_value" property="permissionValue" />
+        <result column="icon" property="icon" />
+        <result column="type" property="type" />
+        <result column="data_type" property="dataType" />
+        <result column="url" property="url" />
+        <result column="permission_status" property="permissionStatus" />
+        <result column="sort" property="sort" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user" property="createUser" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_user" property="updateUser" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, pid, name, permission_value, icon, type, data_type, url, permission_status, sort, create_time, create_user, update_time, update_user
+    </sql>
+
+</mapper>

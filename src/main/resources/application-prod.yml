@@ -1,0 +1,45 @@
+
+server:
+  port: 8082
+  ## 项目名称
+  servlet:
+    context-path: /basic
+
+spring:
+  #数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.103.20.21:3307/zlp-mall?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+  ## redis配置
+  redis:
+    database: 0
+    host: 47.103.20.21
+    password: 123456
+    port: 6379
+    timeout: 5000
+
+#mybatis的相关配置
+mybatis-plus:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zlp.entity
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+    ## 打印日志太详详细了
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+## 打印日志
+logging:
+  level:
+    com.zlp.mapper: DEBUG
+
+
+
+
+
+
+
+
